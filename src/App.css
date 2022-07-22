@@ -1,38 +1,133 @@
-.App {
-  text-align: center;
+.App{
+  background-color: rgba(255, 255, 255, 0.5);  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+*, a:focus {
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  outline: none !important;
+/*убрать эту рамку как на изображении после клика мыши*/
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container{
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+video {
+  object-fit: cover;
+  min-width: 100%;
+  min-height: 100%;
+  position: fixed;
+  top:0;
+  left: 0;
+  z-index: -1;
+}
+h1 {
+  font-family: 'Roboto', sans-serif;
+  color: #3b4c32;
+  font-size: 50px;
+  text-transform: uppercase;
+  background: linear-gradient(to right, hwb(332 18% 10%), hwb(332 9% 61%), hwb(332 5% 42%) 70%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.search{
+width: 100%;
+font-size: 20px;
+font-weight: bold;
+font-family: 'Roboto', sans-serif;
+color:  hwb(332 9% 61%);
+padding: 12px 24px;
+border: solid 1px hwb(332 18% 10%);
+background-color: transparent;
+margin-left: 0;
+box-shadow: inset 0px 0px 0px 4px #ddd6e8;  
+}
+
+
+.containerComponent{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  text-align: center;
+  flex-grow: 1;
+  flex-basis: 0;
+
+}
+.everyrecipe{
+  width: 350px;
+  border: 2px solid #81ab98;
+  margin: 50px;
+  padding: 20px;
+color: hwb(332 9% 61%);
+text-transform: uppercase;
+font-family: 'Roboto', sans-serif;
+font-weight: bold;
+height: 90%;
+
+
+
+}
+li {
+  
+  text-align: start;
+  list-style: none;
+  margin-top: 5px;
+}
+ul{
+  padding: 15px;
+  text-transform: lowercase;
+}
+
+.icon {
+  width: 32px;
   }
-  to {
-    transform: rotate(360deg);
+
+.icons{
+  margin-top: 15px;
+  border-radius: 50%;
+  border: 3px outset hwb(332 9% 61%);
+border-left: outset hwb(332 12% 12%);
+}
+.list{
+background-color: #ddd6e8;  
+opacity: 0.7;
+font-family: 'Roboto', sans-serif;
+}
+.ingredient{
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+.calories{
+  color: hwb(332 12% 12%);
+}
+.btnRecipe{
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+  background-color:  #ddd6e8;  
+  color: hwb(332 9% 61%);
+  font-weight: bold;
+  padding: 7px 10px;
+border: 3px outset hwb(332 9% 61%);
+border-left: outset hwb(332 12% 12%);
+border-right: outset hwb(332 12% 12%);
+border-radius: 10px;
+}
+
+@media all and (max-width: 500px) {
+  .everyrecipe {
+    width: 250px;
+  }
+  .icons{
+    width: 200px;
+  }
+}
+@media all and (max-width: 400px) {
+  .everyrecipe {
+    width: 200px;
+  }
+  .icons{
+    width: 150px;
   }
 }
